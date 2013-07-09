@@ -3,11 +3,31 @@
 </head>
 
 <body>
-  {{> hello}}
+	<div id='vid-global'>
+		{{> vid}}
+	</div>
+	{{> nav}}
+	<div id='logo'>tedvids</div>
 </body>
 
-<template name="hello">
-  <h1>Hello World!</h1>
-  {{greeting}}
-  <input type="button" value="Click" />
+<template name="vid">
+	{{#unless loading}}
+		{{#if vid}}
+			<div id='vid-wrap'>
+				<div id='vid'><img src="{{get_info vid 'image'}}"></div>
+				<div id='des-wrap'>
+					<div id='title'>{{get_info vid "title"}}</div>
+					<div id='des'>{{get_info vid "des"}}</div>
+				</div>
+			</div>
+		{{else}}
+			<div id='not-found'>Video not found</div>
+		{{/if}}
+	{{else}}
+		<div id='loading'>Loading...</div>
+	{{/unless}}
+</template>
+
+<template name='nav'>
+	<div id='nav'><a class='nav' id='left'><</a><a class='nav' id='right'>></a></div>
 </template>

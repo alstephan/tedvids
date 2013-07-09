@@ -8,3 +8,5 @@ coffeescript
 stylus
 jquery
 backbone
+http
+underscore

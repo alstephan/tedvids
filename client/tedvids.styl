@@ -1,1 +1,108 @@
-/* CSS declarations go here */
+our_blue = #167EF9
+
+@-webkit-keyframes leftOut
+	100%
+		-webkit-transform translateX(-250%)
+		opacity 0
+
+@-webkit-keyframes rightOut
+	100%
+		-webkit-transform translateX(250%)
+		opacity 0
+
+@-moz-keyframes leftOut
+	100%
+		-moz-transform translateX(-250%)
+		opacity 0
+
+@-moz-keyframes rightOut
+	100%
+		-moz-transform translateX(250%)
+		opacity 0
+
+@-o-keyframes leftOut
+	100%
+		transform translateX(-250%)
+		opacity 0
+
+@-o-keyframes rightOut
+	100%
+		transform translateX(250%)
+		opacity 0
+
+html, body
+	height 100%
+	padding 0
+	margin 0
+
+body
+	font-family "HelveticaLight", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif
+	background-color #fff
+
+a
+	text-decoration none
+
+.anim-left
+	-webkit-animation leftOut 0.3s ease-in-out forwards
+
+.anim-right
+	-webkit-animation rightOut 0.3s ease-in-out forwards
+
+#vid-global
+	height 620px
+	padding-top 20px
+	background-color #f7f7f7
+
+#loading, #not-found
+	text-align center
+	color #999
+	
+#vid-wrap
+	margin 0 auto
+	width 650px
+	padding 30px 15px 20px 15px
+	border 1px solid transparent
+	color #444
+	background-color #fdfdfd
+	border-radius 3px
+
+	&:hover
+		border 1px solid #ccc
+		background-color #fff
+		border 1px solid #ddd
+		cursor pointer
+		color our_blue
+
+	#vid
+		text-align center
+		height 461px
+
+	#des-wrap
+		padding 20px
+		padding-bottom 0
+
+	#title
+		font-size 22px
+	
+	#des
+		font-size 14px
+		color #666
+		line-height 18px
+
+#nav
+	text-align center
+	padding 40px
+	font-size 48px
+	a
+		color our_blue
+		margin 30px
+		cursor pointer
+		&:hover
+			color lighten(our_blue, 20%)
+
+#logo
+	text-align center
+	font-size 22px
+	color #bbb
+	padding-top 10px
+	letter-spacing 3px
